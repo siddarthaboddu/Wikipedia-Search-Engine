@@ -1,4 +1,4 @@
-﻿searchWord = "";
+searchWord = "";
 
 function query() {
     // var searchWord = "x" + document.getElementById("text").value + "x";
@@ -48,7 +48,12 @@ function renderOutputHtml(ourdata) {
 }
 
 function main() {
-  
+    $("#inputtext").on("keydown", function search(key) {
+        if (key.keyCode == 13) {
+            console.log("narrrrrrrrrrrr");
+            query();
+        }
+    });
    //$('#search').click(query());
 }
 $(document).ready(main);
